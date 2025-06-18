@@ -43,6 +43,7 @@ const FavoriteChannelListItem = ({ channelId, channelName, thumbnail }) => {
 
   return (
     <li
+      data-testid="favorite-channel-list-item"
       ref={setNodeRef}
       style={style}
       {...attributes}
@@ -59,6 +60,7 @@ const FavoriteChannelListItem = ({ channelId, channelName, thumbnail }) => {
       </p>
       <div className="flex flex-1 justify-end pr-2">
         <button
+          data-testid="cancel-favorite-channel-button"
           onClick={handleCancelFavoriteChannel}
           disabled={isProcessing.current}
         >
