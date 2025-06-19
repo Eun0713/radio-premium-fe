@@ -4,17 +4,17 @@ import { persist } from "zustand/middleware";
 export const useUserSettingsStore = create(
   persist(
     (set) => ({
-      settings: {
+      userSettings: {
         isAdDetect: true,
         isReturnChannel: false,
         adRedirectChannelId: null,
       },
 
-      setUserSettings: (updatedSettings) =>
+      setUserSettings: (userSettings) =>
         set((state) => ({
-          settings: {
-            ...state.settings,
-            ...updatedSettings,
+          userSettings: {
+            ...state.userSettings,
+            ...userSettings,
           },
         })),
     }),
